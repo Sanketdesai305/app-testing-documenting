@@ -1,80 +1,44 @@
 FORMAT: 1A
-HOST: https://polls.apiblueprint.org/
+HOST: http://localhost:5000
 
-# API documentation
+# New Document
 
-Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Questions Collection [/questions]
+# Group ineuron
 
-### List All Questions [GET]
+## Update 637cfec14dd7e6b561c2663b [/Update/637cfec14dd7e6b561c2663b]
 
-+ Response 200 (application/json)
+### put req [PUT]
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
++ Response 200 
+    + Attributes (string)
 
-### Create a New Question [POST]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
 
-+ Request (application/json)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+## Delete 637d01c8fd38984ebd1f826b [/Delete/637d01c8fd38984ebd1f826b]
 
-+ Response 201 (application/json)
+### delete req [DELETE]
 
-    + Headers
++ Response 200 
+    + Attributes (string)
 
-            Location: /questions/2
 
-    + Body
 
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
+
+## Add [/Add]
+
+### post req [POST]
+
++ Response 200 
+    + Attributes (string)
+
+
+
+
+## Read [/Read]
+
+### get req [GET]
+
++ Response 200 
+    + Attributes (string)
